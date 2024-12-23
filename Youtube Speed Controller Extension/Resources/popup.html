@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YouTube Speed Controller</title>
+    <style>
+      @media (prefers-color-scheme: light) {
+        :root {
+          --background: #ffffff;
+          --text: #1d1d1f;
+          --secondary-text: #86868b;
+          --button-bg: #f5f5f7;
+          --button-hover: #e5e5e5;
+          --button-active: #d5d5d5;
+          --border-color: #d2d2d7;
+          --accent: #86868b;
+          --accent-bg: #86868b;
+        }
+      }
+      
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --background: #1d1d1f;
+          --text: #f5f5f7;
+          --secondary-text: #86868b;
+          --button-bg: #2c2c2e;
+          --button-hover: #3a3a3c;
+          --button-active: #454548;
+          --border-color: #424245;
+          --accent: #86868b;
+          --accent-bg: #86868b;
+        }
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+        background-color: var(--background);
+        color: var(--text);
+        margin: 0;
+        padding: 12px;
+        width: 200px;
+        box-sizing: border-box;
+      }
+      
+      h3 {
+        font-size: 12px;
+        color: var(--secondary-text);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin: 0 0 6px 0;
+        font-weight: 600;
+      }
+      
+      .button-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+        margin-bottom: 6px;
+      }
+      
+      button {
+        padding: 4px;
+        font-size: 12px;
+        background-color: var(--button-bg);
+        border: none;
+        color: var(--text);
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        font-weight: 400;
+      }
+      
+      button:hover {
+        background-color: var(--button-hover);
+      }
+      
+      button:active {
+        background-color: var(--button-active);
+        transform: scale(0.98);
+      }
+      
+      input[type="number"] {
+        padding: 4px;
+        margin-bottom: 6px;
+        width: 100%;
+        font-size: 12px;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        box-sizing: border-box;
+        outline: none;
+        background-color: var(--button-bg);
+        color: var(--text);
+      }
+      
+      input[type="number"]:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px var(--accent-bg);
+      }
+      
+      hr {
+        border: 0;
+        border-top: 1px solid var(--border-color);
+        margin: 12px 0;
+      }
+      
+      #resetSpeed {
+        color: var(--accent);
+        background-color: transparent;
+      }
+      
+      #resetSpeed:hover {
+          color: var(--background)
+        background-color: var(--accent-bg);
+      }
+    </style>
+  </head>
+  <body>
+      
+    <h3>Video Speed</h3>
+    <div class="button-grid">
+      <button id="speed1">1.0x</button>
+      <button id="speed25">2.5x</button>
+      <button id="speed275">2.75x</button>
+      <button id="speed3">3.0x</button>
+    </div>
+    <hr>
+    
+    <h3>Custom Speed</h3>
+    <div class="button-grid">
+      <input type="number" id="customSpeed" placeholder="Enter speed" step="0.1" min="0.1" />
+      <button id="setCustomSpeed">Set</button>
+    </div>
+    <button id="resetSpeed">Reset to Normal</button>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

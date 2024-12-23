@@ -1,0 +1,10 @@
+{
+    "extension_name": {
+        "message": "Youtube Speed Controller Extension",
+        "description": "The display name for the extension."
+    },
+    "extension_description": {
+        "message": "This is Youtube Speed Controller Extension. You should tell us what your extension does here.",
+        "description": "Description of what the extension does."
+    }
+}
