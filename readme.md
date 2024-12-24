@@ -7,7 +7,6 @@ A Safari extension to control the playback speed of YouTube videos effortlessly.
 - Easily increase or decrease video playback speed.
 - Reset playback speed to the default (1x) quickly.
 - Intuitive interface integrated seamlessly into YouTube.
-- Support for customizable keyboard shortcuts.
 - Custom speed input for precise control.
 
 ## Interface
@@ -28,13 +27,15 @@ The interface includes:
 
 2. Open the Safari browser.
 3. Enable developer mode in Safari if not already enabled:
-   - Go to Safari > Preferences > Advanced.
-   - Check the box that says **Show Develop menu in menu bar**.
+   - Go to Safari > Settings > Advanced.
+   - Check the box that says **Show features for web devolopers**.
 4. Load the extension:
-   - Open the Develop menu in Safari.
-   - Select **Show Extension Builder**.
-   - Click the **Add Extension** button and select the cloned repository folder.
-   - Click **Run** to load the extension.
+   - Go to Safari > Settings > Developer.
+   - Check the box that says **Allow unsigned extensions**.
+   - Run project on **Xcode**.
+   - Go to Safari > Settings > Extensions.
+   - Choose **YouTube Speed Controller** and check the box near it.
+   - That's all!
 
 ## Usage
 
@@ -45,8 +46,8 @@ The interface includes:
    - Enter a custom speed and click **Set** to apply it.
    - Use the "Reset to Normal" button to revert to the default speed.
 4. Alternatively, use the keyboard shortcuts:
-   - `Shift + >` to increase speed.
-   - `Shift + <` to decrease speed.
+   - `Shift + 2(')` to increase speed.
+   - `Shift + 1(!)` to decrease speed.
    - `Shift + R` to reset to the default speed.
 
 ## Development
