@@ -22,6 +22,7 @@ document.getElementById("customSpeed").addEventListener("keydown", (event) => {
   }
 });
 
+
 function setSpeed(speed) {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     chrome.tabs.sendMessage(tabs[0].id, { action: "setSpeed", speed: speed });

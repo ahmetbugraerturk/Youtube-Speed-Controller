@@ -22,7 +22,6 @@
         "js": [ "content.js" ],
         "matches": [ "https://www.youtube.com/*" ]
     }],
-
     "action": {
         "default_popup": "popup.html",
         "default_icon": "images/toolbar-icon.svg"
